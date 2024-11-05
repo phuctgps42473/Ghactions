@@ -11,6 +11,7 @@ jobs:
     steps:
       - run: echo "Du Ma"
       - name: List files in repository
+        uses: actions/checkout@v4.2.2
       - run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
