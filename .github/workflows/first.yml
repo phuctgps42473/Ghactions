@@ -1,0 +1,17 @@
+name: my first
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs: 
+  FirstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Du Ma"
+      - name: List files in repository
+      - run: |
+          echo "The repository ${{ github.repository }} contains the following files:"
+          tree
+  
